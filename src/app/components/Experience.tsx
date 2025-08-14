@@ -6,7 +6,7 @@ const Experience: React.FC = () => {
         <ScrollAnimator>
             <section id="experience" className="py-20">
                 <h2 className="text-4xl font-bold text-white mb-12 flex items-center">
-                    <span className="text-violet-400 mr-3">02.</span> Where I've Worked
+                    <span className="text-violet-400 mr-3">02.</span> Where I&apos;ve Worked
                 </h2>
                 <div className="relative border-l-2 border-slate-700 ml-4">
                     <div className="mb-12 pl-12">

@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
                 <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-4 animate-fade-in-up" style={{ animationDelay: '100ms' }}>Harshit Laxkar.</h1>
                 <h2 className="text-4xl md:text-6xl font-extrabold text-slate-400 mb-6 animate-fade-in-up" style={{ animationDelay: '200ms' }}>I build things for the web.</h2>
                 <p className="text-slate-400 text-lg max-w-xl mb-8 animate-fade-in-up" style={{ animationDelay: '300ms' }}>
-                    I'm a passionate Full Stack Developer with a knack for creating dynamic, scalable web applications. With expertise in the MEAN stack and a focus on clean code and performance, I turn complex problems into elegant digital solutions.
+                    I&apos;m a passionate Full Stack Developer with a knack for creating dynamic, scalable web applications. With expertise in the MEAN stack and a focus on clean code and performance, I turn complex problems into elegant digital solutions.
                 </p>
                 <div className="flex space-x-4 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
                     <a href="https://github.com/hlaxkar" target="_blank" rel="noopener noreferrer" className="inline-block bg-violet-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-violet-600 transition duration-300 transform hover:scale-105">
