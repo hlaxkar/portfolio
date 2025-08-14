@@ -5,6 +5,7 @@ import './globals.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { Analytics } from "@vercel/analytics/next"
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -24,6 +25,7 @@ export default function RootLayout({
                 <main className="container mx-auto px-6 pt-24">
                     {children}
                     <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS || ""} />
+                    <Analytics />
                 </main>
                 <Footer />
             </body>
