@@ -43,3 +43,62 @@ body {
         transform: translateY(0);
     }
 }
+
+/* Custom cursor styles */
+.custom-cursor {
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+}
+
+.cursor-dot {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #a78bfa;
+    box-shadow: 0 0 8px rgba(167, 139, 250, 0.8);
+    mix-blend-mode: screen;
+    will-change: transform, opacity;
+    transition: opacity 0.2s ease;
+}
+
+.cursor-ring {
+    position: fixed;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid rgba(167, 139, 250, 0.7);
+    box-shadow: 0 0 24px rgba(167, 139, 250, 0.35);
+    will-change: transform, opacity;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* 3D background container */
+.three-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    /* Let UI be clickable */
+}
+
+/* Ensure content layers above 3D background */
+main {
+    position: relative;
+    z-index: 10;
+}
+
+/* Hide default cursor on devices with a precise pointer (e.g., mouse) */
+@media (pointer: fine) {
+
+    body,
+    a,
+    button,
+    input,
+    textarea,
+    select {
+        cursor: none;
+    }
+}

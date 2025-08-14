@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://harshitportfolio-rose.vercel.app
+
+# Sitemaps
+Sitemap: https://harshitportfolio-rose.vercel.app/sitemap.xml
