@@ -43,22 +43,24 @@ const CustomCursor: React.FC = () => {
 
         const render = () => {
             // Dot follows tightly
-            const dotLerp = 0.35;
-            dotXRef.current += (targetXRef.current - dotXRef.current) * dotLerp;
-            dotYRef.current += (targetYRef.current - dotYRef.current) * dotLerp;
+            const dotLerp = 0.9;
+            // dotXRef.current += (targetXRef.current - dotXRef.current) * dotLerp;
+            // dotYRef.current += (targetYRef.current - dotYRef.current) * dotLerp;
+            dotXRef.current = targetXRef.current;
+            dotYRef.current = targetYRef.current;
             if (dotRef.current) {
-                dotRef.current.style.transform = `translate3d(${dotXRef.current - 4}px, ${dotYRef.current - 4}px, 0)`;
+                dotRef.current.style.transform = `translate3d(${dotXRef.current - 2}px, ${dotYRef.current - 2}px, 0)`;
                 dotRef.current.style.opacity = isVisible ? '1' : '0';
             }
 
             // Ring follows with more lag for a fluid feel
-            const ringLerp = 0.12;
+            const ringLerp = 0.6;
             ringXRef.current += (targetXRef.current - ringXRef.current) * ringLerp;
             ringYRef.current += (targetYRef.current - ringYRef.current) * ringLerp;
 
             const ringScale = isHoveringClickable ? 1.6 : 1.0;
             if (ringRef.current) {
-                ringRef.current.style.transform = `translate3d(${ringXRef.current - 16}px, ${ringYRef.current - 16}px, 0) scale(${ringScale})`;
+                ringRef.current.style.transform = `translate3d(${ringXRef.current - 10}px, ${ringYRef.current - 10}px, 0) scale(${ringScale})`;
                 ringRef.current.style.opacity = isVisible ? '1' : '0.7';
             }
 

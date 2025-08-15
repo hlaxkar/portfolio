@@ -47,7 +47,7 @@ const StarField: React.FC = () => {
         return geometry;
     }, []);
 
-    const material = useMemo(() => new THREE.PointsMaterial({ color: '#a78bfa', size: 0.02, sizeAttenuation: true }), []);
+    const material = useMemo(() => new THREE.PointsMaterial({ color: '#a78bfa', size: 0.15, sizeAttenuation: true }), []);
 
     return <points geometry={points} material={material} />;
 };
@@ -63,12 +63,12 @@ const ThreeBackground: React.FC = () => {
                 </Suspense>
 
                 <StarField />
-                <FloatingTorus color={"#a78bfa"} position={[2.8, 0.5, -1.2]} rotationSpeed={0.22} />
+                {/* <FloatingTorus color={"#a78bfa"} position={[2.8, 0.5, -1.2]} rotationSpeed={0.22} />
                 <FloatingTorus color={"#60a5fa"} position={[-3.0, -1.0, -0.8]} rotationSpeed={0.35} />
-                <FloatingTorus color={"#34d399"} position={[0.2, 2.2, -1.5]} rotationSpeed={0.28} />
+                <FloatingTorus color={"#34d399"} position={[0.2, 2.2, -1.5]} rotationSpeed={0.28} /> */}
 
                 {/* Optional: enable camera interaction on desktop */}
-                <OrbitControls enablePan={false} enableZoom={false} autoRotate autoRotateSpeed={0.6} />
+                <OrbitControls enablePan={false} enableZoom={false} autoRotate autoRotateSpeed={0.9} />
             </Canvas>
         </div>
     );
