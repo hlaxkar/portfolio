@@ -49,7 +49,7 @@ const Projects: React.FC = () => {
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {projectsData.map((project) => (
-                        <div key={project.title} className="glass-effect rounded-lg p-6 flex flex-col justify-between hover:border-violet-400 transition duration-300 transform hover:-translate-y-2">
+                        <div key={project.title} className="glass-effect rounded-lg p-6 flex flex-col justify-between hover:border-violet-400 transition duration-300 transform hover:-translate-y-2 clickable">
                             <div>
                                 <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
                                 <p className="text-slate-400 mb-4">{project.description}</p>
