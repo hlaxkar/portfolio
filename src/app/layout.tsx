@@ -8,6 +8,7 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 import { Analytics } from "@vercel/analytics/next"
 import CustomCursor from './components/CustomCursor';
 import ThreeBackgroundClient from './components/ThreeBackgroundClient';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -30,6 +31,7 @@ export default function RootLayout({
                     {children}
                     <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS || ""} />
                     <Analytics />
+                    <SpeedInsights />
                 </main>
                 <Footer />
             </body>
